@@ -38,38 +38,7 @@ class _BookDetailsState extends State<BookDetails> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Center(child: Image.network(book.imageUrl)),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                  flex: 2,
-                                  child: Text(book.title,
-                                      maxLines: 5,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline3)),
-                              Text(book.price,
-                                  style: Theme.of(context).textTheme.headline1)
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(book.authors,
-                              style: Theme.of(context).textTheme.headline2),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          RatingBarIndicator(
-                            rating: double.parse(book.rating),
-                            itemBuilder: (context, index) => Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                            ),
-                            itemCount: 5,
-                            itemSize: 30.0,
-                            direction: Axis.horizontal,
-                          ),
+                          introductionWidget(book),
                           SizedBox(height: 15),
                           descriptionWidget(book)
                         ],
@@ -82,6 +51,38 @@ class _BookDetailsState extends State<BookDetails> {
               },
             ),
     );
+  }
+
+  Widget introductionWidget(Book book) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+              flex: 2,
+              child: Text(book.title,
+                  maxLines: 5, style: Theme.of(context).textTheme.headline3)),
+          Text(book.price, style: Theme.of(context).textTheme.headline1)
+        ],
+      ),
+      SizedBox(
+        height: 5,
+      ),
+      Text(book.authors, style: Theme.of(context).textTheme.headline2),
+      SizedBox(
+        height: 5,
+      ),
+      RatingBarIndicator(
+        rating: double.parse(book.rating),
+        itemBuilder: (context, index) => Icon(
+          Icons.star,
+          color: Colors.amber,
+        ),
+        itemCount: 5,
+        itemSize: 30.0,
+        direction: Axis.horizontal,
+      )
+    ]);
   }
 
   Widget descriptionWidget(Book book) {
@@ -97,7 +98,8 @@ class _BookDetailsState extends State<BookDetails> {
             style: Theme.of(context)
                 .textTheme
                 .headline2
-                .copyWith(fontSize: 16, color: Colors.black))
+                .copyWith(fontSize: 16, color: Colors.black)),
+        SizedBox(height: 10)
       ],
     );
   }
