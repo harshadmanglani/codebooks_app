@@ -16,6 +16,4 @@ A Flutter app that uses the IT-Book-Store API to retrieve information about tech
 <img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/4.jpeg" width = "400" height = "200">
 
 ### Mobile View
-<img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/2.jpeg" height = "400" width = "200">
-<img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/3.jpeg" height = "400" width = "200">
-<img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/5.jpeg" height = "400" width = "200">
+| <img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/2.jpeg" height = "400" width = "200"> | <img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/3.jpeg" height = "400" width = "200"> | <img src="https://github.com/harshadmanglani/codebooks_app/blob/master/screenshots/5.jpeg" height = "400" width = "200"> |
